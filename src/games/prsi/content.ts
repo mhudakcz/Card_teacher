@@ -2,18 +2,7 @@
 // Tentýž text se používá v aplikaci i v tištitelném dokumentu (docs/rules).
 
 import type { Lng } from '@/i18n';
-
-export interface RulesSection {
-  heading: string;
-  body: string[];
-}
-
-export interface TutorialStep {
-  title: string;
-  text: string;
-  /** Volitelná konfigurace stavu pro názornou ukázku. */
-  demo?: 'sevens' | 'ace' | 'over' | 'match';
-}
+import type { RulesSection, TutorialStep } from '@/games/types';
 
 export const prsiRules: Record<Lng, RulesSection[]> = {
   cs: [

@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useNav } from './store';
+import { availableViews } from './games/types';
+import { getGame } from './games/registry';
 import { LangToggle } from './ui/components/LangToggle';
 import { ThemeControls } from './ui/components/ThemeControls';
 import { GameList } from './ui/screens/GameList';
@@ -10,6 +12,8 @@ import { Play } from './ui/screens/Play';
 export function App() {
   const { t } = useTranslation();
   const { game, view, setView, goHome } = useNav();
+  const def = game ? getGame(game) : undefined;
+  const views = def ? availableViews(def) : [];
 
   return (
     <div className="min-h-full flex flex-col">
@@ -21,7 +25,7 @@ export function App() {
         <div className="flex items-center gap-3 flex-wrap justify-end">
           {game && (
             <nav className="flex gap-1 text-sm">
-              {(['rules', 'tutorial', 'play'] as const).map((v) => (
+              {views.map((v) => (
                 <button
                   key={v}
                   onClick={() => setView(v)}
@@ -43,9 +47,9 @@ export function App() {
 
       <main className="flex-1 overflow-auto">
         {!game && <GameList />}
-        {game === 'prsi' && view === 'rules' && <Rules />}
-        {game === 'prsi' && view === 'tutorial' && <Tutorial />}
-        {game === 'prsi' && view === 'play' && <Play />}
+        {game && view === 'rules' && <Rules />}
+        {game && view === 'tutorial' && <Tutorial />}
+        {game && view === 'play' && <Play />}
       </main>
     </div>
   );

@@ -1,15 +1,7 @@
 import { useTranslation } from 'react-i18next';
+import { GAMES } from '@/games/registry';
+import { availableViews } from '@/games/types';
 import { useNav } from '@/store';
-
-interface GameCard {
-  id: 'prsi';
-  available: boolean;
-}
-
-const GAMES: GameCard[] = [{ id: 'prsi', available: true }];
-
-// Plánované hry (zatím nedostupné) — ukazují cestu k rozšíření.
-const PLANNED = ['Oko bere', 'Sedma', 'Žolíky', 'Kanasta', 'Mariáš', 'Taroky', 'Poker'];
 
 export function GameList() {
   const { t } = useTranslation();
@@ -21,29 +13,32 @@ export function GameList() {
       <p className="text-muted mb-6">{t('app.subtitle')}</p>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        {GAMES.map((g) => (
-          <button
-            key={g.id}
-            onClick={() => openGame(g.id)}
-            className="group text-left rounded-2xl felt-table p-5 hover:scale-[1.02] hover:-translate-y-0.5 transition duration-200"
-          >
-            <div className="text-xl font-bold text-white drop-shadow">{t(`games.${g.id}.name`)}</div>
-            <div className="text-white/80 text-sm mt-1">{t(`games.${g.id}.tagline`)}</div>
-            <div className="mt-3 inline-flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full bg-black/25 text-white/90">
-              {t('nav.rules')} · {t('nav.tutorial')} · {t('nav.play')}
-            </div>
-          </button>
-        ))}
-
-        {PLANNED.map((name) => (
-          <div
-            key={name}
-            className="rounded-2xl border border-dashed border-line panel p-5 opacity-70"
-          >
-            <div className="text-xl font-bold text-muted">{name}</div>
-            <div className="text-muted/70 text-sm mt-1">Připravujeme…</div>
-          </div>
-        ))}
+        {GAMES.map((g) => {
+          const views = availableViews(g);
+          const playable = views.includes('play');
+          return (
+            <button
+              key={g.id}
+              onClick={() => openGame(g.id)}
+              className="group text-left rounded-2xl felt-table p-5 hover:scale-[1.02] hover:-translate-y-0.5 transition duration-200"
+            >
+              <div className="text-xl font-bold text-white drop-shadow">
+                {t(`games.${g.id}.name`)}
+              </div>
+              <div className="text-white/80 text-sm mt-1">{t(`games.${g.id}.tagline`)}</div>
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full bg-black/25 text-white/90">
+                  {views.map((v) => t('nav.' + v)).join(' · ')}
+                </span>
+                {!playable && (
+                  <span className="text-xs font-medium px-2 py-1 rounded-full bg-amber-400/90 text-black">
+                    {t('app.rulesOnly')}
+                  </span>
+                )}
+              </div>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

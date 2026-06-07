@@ -18,15 +18,26 @@ const SIZES = {
 };
 
 const RANK_LABEL: Record<string, string> = {
+  '2': '2',
+  '3': '3',
+  '4': '4',
+  '5': '5',
+  '6': '6',
   '7': '7',
   '8': '8',
   '9': '9',
   '10': '10',
+  J: 'J',
+  Q: 'Q',
   U: 'U',
   O: 'O',
   K: 'K',
   A: 'A',
 };
+
+function rankLabel(rank: string): string {
+  return RANK_LABEL[rank] ?? rank;
+}
 
 export function CardView({ card, faceDown, selectable, dimmed, onClick, size = 'md' }: Props) {
   const { t } = useTranslation();
@@ -46,8 +57,54 @@ export function CardView({ card, faceDown, selectable, dimmed, onClick, size = '
     );
   }
 
+  if (card.deck === 'tarock' && card.suit === 'trump') {
+    const isSkyz = card.rank === 'SKYZ';
+    const label = isSkyz ? 'Škýz' : `taroka ${card.rank}`;
+    return (
+      <button
+        type="button"
+        onClick={selectable ? onClick : undefined}
+        disabled={!selectable}
+        aria-label={label}
+        className={`${base} bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-700 text-amber-950 p-1.5 transition animate-card-in ${
+          selectable ? 'cursor-pointer hover:-translate-y-2 hover:shadow-xl ring-2 ring-accent' : 'cursor-default'
+        } ${dimmed ? 'opacity-40' : ''}`}
+      >
+        <div className="flex items-center justify-between font-bold leading-none">
+          <span>{isSkyz ? '★' : card.rank}</span>
+          <span className="text-[10px]">✦</span>
+        </div>
+        <div className="flex items-center justify-center font-black leading-none">
+          {isSkyz ? '★' : card.rank}
+        </div>
+        <div className="flex items-center justify-between font-bold leading-none rotate-180">
+          <span>{isSkyz ? '★' : card.rank}</span>
+          <span className="text-[10px]">✦</span>
+        </div>
+      </button>
+    );
+  }
+
+  if (card.rank === 'JOKER') {
+    return (
+      <button
+        type="button"
+        onClick={selectable ? onClick : undefined}
+        disabled={!selectable}
+        aria-label={t('card.joker', 'Žolík')}
+        className={`${base} bg-gradient-to-br from-fuchsia-600 via-purple-700 to-indigo-800 text-white p-1.5 transition animate-card-in ${
+          selectable ? 'cursor-pointer hover:-translate-y-2 hover:shadow-xl ring-2 ring-accent' : 'cursor-default'
+        } ${dimmed ? 'opacity-40' : ''}`}
+      >
+        <div className="flex items-center font-bold leading-none">★</div>
+        <div className="flex items-center justify-center text-2xl">🃏</div>
+        <div className="flex items-center justify-end font-bold leading-none rotate-180">★</div>
+      </button>
+    );
+  }
+
   const color = suitColor(card.suit);
-  const label = `${t('card.ranks.' + card.rank)} ${t('card.suits.' + card.suit)}`;
+  const label = `${t('card.ranks.' + card.rank, rankLabel(card.rank))} ${t('card.suits.' + card.suit, card.suit)}`;
 
   return (
     <button
@@ -61,14 +118,14 @@ export function CardView({ card, faceDown, selectable, dimmed, onClick, size = '
       style={{ color }}
     >
       <div className="flex items-center justify-between font-bold leading-none">
-        <span>{RANK_LABEL[card.rank]}</span>
+        <span>{rankLabel(card.rank)}</span>
         <SuitIcon suit={card.suit} size={14} />
       </div>
       <div className="flex items-center justify-center">
         <SuitIcon suit={card.suit} size={size === 'sm' ? 20 : 30} />
       </div>
       <div className="flex items-center justify-between font-bold leading-none rotate-180">
-        <span>{RANK_LABEL[card.rank]}</span>
+        <span>{rankLabel(card.rank)}</span>
         <SuitIcon suit={card.suit} size={14} />
       </div>
     </button>

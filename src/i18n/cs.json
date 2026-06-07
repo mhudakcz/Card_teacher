@@ -2,7 +2,8 @@
   "app": {
     "title": "Card Teacher",
     "subtitle": "Nauč se karetní hry",
-    "chooseGame": "Vyber si hru"
+    "chooseGame": "Vyber si hru",
+    "rulesOnly": "Zatím jen pravidla"
   },
   "nav": {
     "back": "Zpět",
@@ -20,6 +21,158 @@
     "prsi": {
       "name": "Prší",
       "tagline": "Česká klasika pro 2–6 hráčů"
+    },
+    "oko": {
+      "name": "Oko bere",
+      "tagline": "České jednadvacet proti krupiérovi"
+    },
+    "sedma": {
+      "name": "Sedma",
+      "tagline": "Štychová klasika — sedma přebíjí vše"
+    },
+    "zoliky": {
+      "name": "Žolíky",
+      "tagline": "Skládej postupky a trojice se žolíkem"
+    },
+    "kanasta": {
+      "name": "Kanasta",
+      "tagline": "Týmová tvorba sestav a kanast"
+    },
+    "marias": {
+      "name": "Mariáš",
+      "tagline": "Trumfy, hlášky a štychy pro 2–3 hráče"
+    },
+    "taroky": {
+      "name": "Taroky",
+      "tagline": "54 tarokových karet a mocné trumfy"
+    },
+    "poker": {
+      "name": "Poker (Texas Hold'em)",
+      "tagline": "Sázej, blafuj a slož nejlepší kombinaci"
+    }
+  },
+  "oko": {
+    "hit": "Beru",
+    "stand": "Stojím",
+    "total": "Součet: {{value}}",
+    "push": "Remíza",
+    "result": "Ty {{player}} : {{dealer}} krupiér"
+  },
+  "sedma": {
+    "talon": "Talon",
+    "trick": "Štych",
+    "points": "{{value}} b.",
+    "yourLead": "Vynášíš",
+    "yourResponse": "Odpověz na kartu",
+    "trickTaken": "{{name}} bere štych ({{points}} b.)",
+    "final": "Konec: {{a}} : {{b}}"
+  },
+  "poker": {
+    "fold": "Složit",
+    "check": "Čekat",
+    "call": "Dorovnat ({{amount}})",
+    "raiseTo": "Navýšit na {{value}}",
+    "allIn": "All-in",
+    "pot": "Bank: {{value}}",
+    "chips": "Žetony: {{value}}",
+    "bet": "sázka {{value}}",
+    "folded": "složil",
+    "button": "dealer",
+    "community": "Společné karty",
+    "nextHand": "Další rozdání",
+    "wins": "{{name}} bere bank {{pot}}",
+    "split": "Dělený bank {{pot}}",
+    "street": {
+      "preflop": "Preflop",
+      "flop": "Flop",
+      "turn": "Turn",
+      "river": "River",
+      "showdown": "Showdown"
+    },
+    "hands": {
+      "highCard": "vysoká karta",
+      "pair": "dvojice",
+      "twoPair": "dvě dvojice",
+      "trips": "trojice",
+      "straight": "postupka",
+      "flush": "barva",
+      "fullHouse": "full house",
+      "quads": "čtveřice",
+      "straightFlush": "postupka v barvě"
+    },
+    "log": {
+      "blinds": "Blindy {{sb}}/{{bb}}",
+      "folds": "{{name}} složil",
+      "checks": "{{name}} čeká",
+      "calls": "{{name}} dorovnal {{amount}}",
+      "raises": "{{name}} navýšil na {{to}}",
+      "wins": "{{name}} bere {{pot}}",
+      "split": "Dělený bank {{pot}}"
+    }
+  },
+  "zoliky": {
+    "stock": "Balíček",
+    "discard": "Odhazovák",
+    "cards": "karet",
+    "ready": "Ruka složena!",
+    "drawPhase": "Lízni si kartu",
+    "discardPhase": "Odhoď kartu",
+    "discardHint": "Klikni na kartu, kterou chceš odhodit. Když ti zbylé karty utvoří sestavy, vyhráváš.",
+    "log": {
+      "drewStock": "{{name}} líznul z balíčku",
+      "drewDiscard": "{{name}} vzal z odhazováku",
+      "discarded": "{{name}} odhodil",
+      "wins": "{{name}} složil ruku!",
+      "empty": "Došly karty"
+    }
+  },
+  "marias": {
+    "trump": "Trumf",
+    "trick": "Štych",
+    "points": "{{value}} b.",
+    "marriage": "hláška {{value}} b.",
+    "yourLead": "Vynášíš",
+    "yourResponse": "Odpověz na kartu",
+    "log": {
+      "marriage": "{{name}} hlásí {{pts}} b.",
+      "trick": "{{name}} bere štych ({{points}} b.)",
+      "final": "Konec: {{a}} : {{b}}"
+    }
+  },
+  "kanasta": {
+    "stock": "Balíček",
+    "discard": "Odhazovák",
+    "cards": "karet",
+    "redThrees": "červené trojky: {{value}}",
+    "hasCanasta": "má kanastu",
+    "pureCanasta": "čistá kanasta",
+    "mixedCanasta": "kanasta",
+    "drawPhase": "Líznout: klikni na balíček nebo odhazovák",
+    "playPhase": "Vyber karty → Vylož sestavu / přidej k sestavě / Odhoď",
+    "layMeld": "Vyložit sestavu",
+    "discardBtn": "Odhodit vybranou",
+    "selectHint": "Klik na sestavu přidá vybrané karty.",
+    "log": {
+      "drewStock": "{{name}} líznul z balíčku",
+      "drewDiscard": "{{name}} vzal z odhazováku",
+      "melded": "{{name}} vyložil sestavu {{rank}}",
+      "extended": "{{name}} rozšířil sestavu {{rank}}",
+      "discarded": "{{name}} odhodil",
+      "redThree": "{{name}} odložil červenou trojku (100 b.)",
+      "out": "{{name}} jde ven!",
+      "final": "Konec: {{a}} : {{b}}"
+    }
+  },
+  "taroky": {
+    "trick": "Štych",
+    "tricksLeft": "Štychů",
+    "points": "{{value}} b.",
+    "yourLead": "Vynášíš",
+    "yourResponse": "Odpověz na kartu",
+    "log": {
+      "trick": "{{name}} bere štych ({{points}} b.)",
+      "pagat": "{{name}} uhrál pagát ultimo! +10 b.",
+      "final": "Konec: {{a}} : {{b}}"
     }
   },
   "play": {
@@ -38,6 +191,7 @@
     "players": "Hráči"
   },
   "card": {
+    "joker": "Žolík",
     "suits": {
       "acorns": "Žaludy",
       "leaves": "Listy",

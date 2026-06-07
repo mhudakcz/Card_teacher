@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-export type GameId = 'prsi';
+export type GameId = string;
 export type View = 'rules' | 'tutorial' | 'play';
 
 export type Mode = 'day' | 'night';

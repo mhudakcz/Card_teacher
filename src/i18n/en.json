@@ -2,7 +2,8 @@
   "app": {
     "title": "Card Teacher",
     "subtitle": "Learn card games",
-    "chooseGame": "Choose a game"
+    "chooseGame": "Choose a game",
+    "rulesOnly": "Rules only for now"
   },
   "nav": {
     "back": "Back",
@@ -20,6 +21,158 @@
     "prsi": {
       "name": "Prší (Czech Mau-Mau)",
       "tagline": "Czech classic for 2–6 players"
+    },
+    "oko": {
+      "name": "Oko bere (Czech 21)",
+      "tagline": "Czech twenty-one against the dealer"
+    },
+    "sedma": {
+      "name": "Sedma (Czech Sevens)",
+      "tagline": "Trick-taking classic — the seven beats anything"
+    },
+    "zoliky": {
+      "name": "Žolíky (Rummy)",
+      "tagline": "Build runs and sets with wild jokers"
+    },
+    "kanasta": {
+      "name": "Canasta",
+      "tagline": "Team melds and canastas"
+    },
+    "marias": {
+      "name": "Mariáš",
+      "tagline": "Trumps, marriages and tricks for 2–3 players"
+    },
+    "taroky": {
+      "name": "Tarock",
+      "tagline": "54 tarock cards and powerful trumps"
+    },
+    "poker": {
+      "name": "Poker (Texas Hold'em)",
+      "tagline": "Bet, bluff and make the best hand"
+    }
+  },
+  "oko": {
+    "hit": "Hit",
+    "stand": "Stand",
+    "total": "Total: {{value}}",
+    "push": "Draw",
+    "result": "You {{player}} : {{dealer}} dealer"
+  },
+  "sedma": {
+    "talon": "Talon",
+    "trick": "Trick",
+    "points": "{{value}} pts",
+    "yourLead": "You lead",
+    "yourResponse": "Respond to the card",
+    "trickTaken": "{{name}} takes the trick ({{points}} pts)",
+    "final": "Final: {{a}} : {{b}}"
+  },
+  "poker": {
+    "fold": "Fold",
+    "check": "Check",
+    "call": "Call ({{amount}})",
+    "raiseTo": "Raise to {{value}}",
+    "allIn": "All-in",
+    "pot": "Pot: {{value}}",
+    "chips": "Chips: {{value}}",
+    "bet": "bet {{value}}",
+    "folded": "folded",
+    "button": "dealer",
+    "community": "Community cards",
+    "nextHand": "Next hand",
+    "wins": "{{name}} wins the pot {{pot}}",
+    "split": "Split pot {{pot}}",
+    "street": {
+      "preflop": "Pre-flop",
+      "flop": "Flop",
+      "turn": "Turn",
+      "river": "River",
+      "showdown": "Showdown"
+    },
+    "hands": {
+      "highCard": "high card",
+      "pair": "pair",
+      "twoPair": "two pair",
+      "trips": "three of a kind",
+      "straight": "straight",
+      "flush": "flush",
+      "fullHouse": "full house",
+      "quads": "four of a kind",
+      "straightFlush": "straight flush"
+    },
+    "log": {
+      "blinds": "Blinds {{sb}}/{{bb}}",
+      "folds": "{{name}} folds",
+      "checks": "{{name}} checks",
+      "calls": "{{name}} calls {{amount}}",
+      "raises": "{{name}} raises to {{to}}",
+      "wins": "{{name}} wins {{pot}}",
+      "split": "Split pot {{pot}}"
+    }
+  },
+  "zoliky": {
+    "stock": "Stock",
+    "discard": "Discard",
+    "cards": "cards",
+    "ready": "Hand complete!",
+    "drawPhase": "Draw a card",
+    "discardPhase": "Discard a card",
+    "discardHint": "Click the card you want to discard. If your remaining cards form valid combinations, you win.",
+    "log": {
+      "drewStock": "{{name}} drew from the stock",
+      "drewDiscard": "{{name}} took the discard",
+      "discarded": "{{name}} discarded",
+      "wins": "{{name}} melded the whole hand!",
+      "empty": "Out of cards"
+    }
+  },
+  "marias": {
+    "trump": "Trump",
+    "trick": "Trick",
+    "points": "{{value}} pts",
+    "marriage": "marriage {{value}} pts",
+    "yourLead": "You lead",
+    "yourResponse": "Respond to the card",
+    "log": {
+      "marriage": "{{name}} announces {{pts}} pts",
+      "trick": "{{name}} takes the trick ({{points}} pts)",
+      "final": "Final: {{a}} : {{b}}"
+    }
+  },
+  "kanasta": {
+    "stock": "Stock",
+    "discard": "Discard",
+    "cards": "cards",
+    "redThrees": "red threes: {{value}}",
+    "hasCanasta": "has a canasta",
+    "pureCanasta": "pure canasta",
+    "mixedCanasta": "canasta",
+    "drawPhase": "Draw: click the stock or the discard",
+    "playPhase": "Select cards → Lay meld / add to a meld / Discard",
+    "layMeld": "Lay meld",
+    "discardBtn": "Discard selected",
+    "selectHint": "Click a meld to add the selected cards.",
+    "log": {
+      "drewStock": "{{name}} drew from the stock",
+      "drewDiscard": "{{name}} took the discard",
+      "melded": "{{name}} laid a meld of {{rank}}",
+      "extended": "{{name}} extended the {{rank}} meld",
+      "discarded": "{{name}} discarded",
+      "redThree": "{{name}} set aside a red three (100 pts)",
+      "out": "{{name}} goes out!",
+      "final": "Final: {{a}} : {{b}}"
+    }
+  },
+  "taroky": {
+    "trick": "Trick",
+    "tricksLeft": "Tricks",
+    "points": "{{value}} pts",
+    "yourLead": "You lead",
+    "yourResponse": "Respond to the card",
+    "log": {
+      "trick": "{{name}} takes the trick ({{points}} pts)",
+      "pagat": "{{name}} won pagat ultimo! +10 pts",
+      "final": "Final: {{a}} : {{b}}"
     }
   },
   "play": {
