@@ -14,6 +14,7 @@ import { pokerGame } from './poker';
 import { cernyPetrGame } from './cernypetr';
 import { pasiansGame } from './pasians';
 import { durakGame } from './durak';
+import { ginRummyGame } from './ginrummy';
 
 export const GAMES: GameDefinition[] = [
   prsiGame,
@@ -27,6 +28,7 @@ export const GAMES: GameDefinition[] = [
   cernyPetrGame,
   pasiansGame,
   durakGame,
+  ginRummyGame,
 ];
 
 export type GameId = (typeof GAMES)[number]['id'];

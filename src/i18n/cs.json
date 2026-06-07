@@ -61,6 +61,10 @@
     "durak": {
       "name": "Durak",
       "tagline": "Ruská klasika — nezůstaň poslední s kartami"
+    },
+    "ginrummy": {
+      "name": "Gin Rummy",
+      "tagline": "Skládej sety a postupky, klepni s nízkým deadwoodem"
     }
   },
   "oko": {
@@ -221,6 +225,31 @@
     "moves": "Tahů: {{value}}",
     "won": "Hotovo! Pasiáns ti vyšel. 🎉",
     "hint": "Klikni na kartu pro umístění, na balíček pro líznutí."
+  },
+  "ginrummy": {
+    "cards": "karet",
+    "stock": "Balíček",
+    "discard": "Odhazovák",
+    "deadwood": "Deadwood: {{value}}",
+    "drawPhase": "Lízni — z balíčku nebo odhazováku",
+    "discardPhase": "Odhoď kartu",
+    "discardHint": "Klikni na kartu, kterou chceš odhodit.",
+    "knock": "Klepnout",
+    "knockArmed": "Vyber kartu k odhození…",
+    "knockHint": "Vyber kartu k odhození — pak se klepne.",
+    "youWon": "Vyhrál jsi! +{{points}} b.",
+    "youUndercut": "Undercut! Klepl jsi ho zpět, +{{points}} b.",
+    "youLost": "Soupeř boduje +{{points}} b.",
+    "draw": "Remíza — došel balíček.",
+    "log": {
+      "drewStock": "{{name}} líznul z balíčku",
+      "drewDiscard": "{{name}} vzal z odhazováku",
+      "discarded": "{{name}} odhodil",
+      "knock": "{{name}} klepl (+{{points}} b.)",
+      "gin": "{{name}} hlásí gin! (+{{points}} b.)",
+      "undercut": "{{name}} klepl, ale dostal undercut",
+      "draw": "Remíza — došel balíček"
+    }
   },
   "durak": {
     "cards": "karet",

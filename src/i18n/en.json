@@ -61,6 +61,10 @@
     "durak": {
       "name": "Durak",
       "tagline": "Russian classic — don't be the last one holding cards"
+    },
+    "ginrummy": {
+      "name": "Gin Rummy",
+      "tagline": "Build sets and runs, knock with low deadwood"
     }
   },
   "oko": {
@@ -221,6 +225,31 @@
     "moves": "Moves: {{value}}",
     "won": "Done! You solved the solitaire. 🎉",
     "hint": "Click a card to place it, click the stock to draw."
+  },
+  "ginrummy": {
+    "cards": "cards",
+    "stock": "Stock",
+    "discard": "Discard",
+    "deadwood": "Deadwood: {{value}}",
+    "drawPhase": "Draw — from the stock or the discard",
+    "discardPhase": "Discard a card",
+    "discardHint": "Click the card you want to discard.",
+    "knock": "Knock",
+    "knockArmed": "Pick a card to discard…",
+    "knockHint": "Pick a card to discard — then you knock.",
+    "youWon": "You won! +{{points}} pts",
+    "youUndercut": "Undercut! You knocked them back, +{{points}} pts",
+    "youLost": "Opponent scores +{{points}} pts",
+    "draw": "Draw — the stock ran out.",
+    "log": {
+      "drewStock": "{{name}} drew from the stock",
+      "drewDiscard": "{{name}} took the discard",
+      "discarded": "{{name}} discarded",
+      "knock": "{{name}} knocked (+{{points}} pts)",
+      "gin": "{{name}} declares gin! (+{{points}} pts)",
+      "undercut": "{{name}} knocked but got undercut",
+      "draw": "Draw — the stock ran out"
+    }
   },
   "durak": {
     "cards": "cards",
