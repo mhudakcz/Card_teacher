@@ -49,6 +49,14 @@
     "poker": {
       "name": "Poker (Texas Hold'em)",
       "tagline": "Bet, bluff and make the best hand"
+    },
+    "cernypetr": {
+      "name": "Black Peter (Old Maid)",
+      "tagline": "Pair up cards and don't get stuck with the lone jack"
+    },
+    "pasians": {
+      "name": "Solitaire (Klondike)",
+      "tagline": "The classic solitaire — build every card to the foundations"
     }
   },
   "oko": {
@@ -189,6 +197,26 @@
     "mustDraw": "You must draw {{count}} cards",
     "skipped": "{{name}} is skipped (ace)",
     "players": "Players"
+  },
+  "cernypetr": {
+    "cards": "cards",
+    "discarded": "discarded: {{value}}",
+    "yourTurn": "Draw a card from your opponent",
+    "drawHint": "Click any of the opponent's cards — you draw it blindly.",
+    "youWon": "You won! The Black Peter stayed with your opponent.",
+    "youLost": "You lost — you were left with the Black Peter.",
+    "log": {
+      "draw": "{{name}} took a card",
+      "pair": "{{name}} discarded a pair",
+      "end": "{{name}} was left with the Black Peter"
+    }
+  },
+  "pasians": {
+    "stock": "Stock",
+    "waste": "Waste",
+    "moves": "Moves: {{value}}",
+    "won": "Done! You solved the solitaire. 🎉",
+    "hint": "Click a card to place it, click the stock to draw."
   },
   "print": {
     "allRules": "Printable rules",

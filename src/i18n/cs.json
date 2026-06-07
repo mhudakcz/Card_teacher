@@ -49,6 +49,14 @@
     "poker": {
       "name": "Poker (Texas Hold'em)",
       "tagline": "Sázej, blafuj a slož nejlepší kombinaci"
+    },
+    "cernypetr": {
+      "name": "Černý Petr",
+      "tagline": "Spáruj karty a nezůstaň s osamělým spodkem"
+    },
+    "pasians": {
+      "name": "Pasiáns (Klondike)",
+      "tagline": "Klasický solitér — slož všechny karty na cíle"
     }
   },
   "oko": {
@@ -189,6 +197,26 @@
     "mustDraw": "Musíš líznout {{count}} karet",
     "skipped": "{{name}} stojí (eso)",
     "players": "Hráči"
+  },
+  "cernypetr": {
+    "cards": "karet",
+    "discarded": "odhozeno: {{value}}",
+    "yourTurn": "Vytáhni soupeři kartu",
+    "drawHint": "Klikni na kteroukoli soupeřovu kartu — vytáhneš ji naslepo.",
+    "youWon": "Vyhrál jsi! Černý Petr zůstal soupeři.",
+    "youLost": "Prohrál jsi — zůstal ti Černý Petr.",
+    "log": {
+      "draw": "{{name}} si vzal kartu",
+      "pair": "{{name}} odhodil pár",
+      "end": "{{name}} zůstal s Černým Petrem"
+    }
+  },
+  "pasians": {
+    "stock": "Balíček",
+    "waste": "Odhazovák",
+    "moves": "Tahů: {{value}}",
+    "won": "Hotovo! Pasiáns ti vyšel. 🎉",
+    "hint": "Klikni na kartu pro umístění, na balíček pro líznutí."
   },
   "print": {
     "allRules": "Pravidla ke stažení",
