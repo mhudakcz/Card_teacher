@@ -57,6 +57,10 @@
     "pasians": {
       "name": "Solitaire (Klondike)",
       "tagline": "The classic solitaire — build every card to the foundations"
+    },
+    "durak": {
+      "name": "Durak",
+      "tagline": "Russian classic — don't be the last one holding cards"
     }
   },
   "oko": {
@@ -217,6 +221,26 @@
     "moves": "Moves: {{value}}",
     "won": "Done! You solved the solitaire. 🎉",
     "hint": "Click a card to place it, click the stock to draw."
+  },
+  "durak": {
+    "cards": "cards",
+    "deck": "Stock",
+    "trump": "Trump",
+    "tableEmpty": "Play a card",
+    "take": "Take",
+    "done": "Done",
+    "youAttack": "You attack — play a card",
+    "youDefend": "You defend — beat it, or take",
+    "youWon": "You won! Your opponent is the durak. 🎉",
+    "youLost": "You lost — you are the durak.",
+    "draw": "Draw — you both ran out of cards.",
+    "log": {
+      "attack": "{{name}} attacks",
+      "defend": "{{name}} beats it",
+      "take": "{{name}} takes {{count}} cards",
+      "beat": "{{name}} says done",
+      "durak": "{{name}} is the durak"
+    }
   },
   "print": {
     "allRules": "Printable rules",

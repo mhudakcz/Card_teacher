@@ -57,6 +57,10 @@
     "pasians": {
       "name": "Pasiáns (Klondike)",
       "tagline": "Klasický solitér — slož všechny karty na cíle"
+    },
+    "durak": {
+      "name": "Durak",
+      "tagline": "Ruská klasika — nezůstaň poslední s kartami"
     }
   },
   "oko": {
@@ -217,6 +221,26 @@
     "moves": "Tahů: {{value}}",
     "won": "Hotovo! Pasiáns ti vyšel. 🎉",
     "hint": "Klikni na kartu pro umístění, na balíček pro líznutí."
+  },
+  "durak": {
+    "cards": "karet",
+    "deck": "Balíček",
+    "trump": "Trumf",
+    "tableEmpty": "Polož kartu",
+    "take": "Beru",
+    "done": "Bito",
+    "youAttack": "Útočíš — polož kartu",
+    "youDefend": "Bráníš se — přebij, nebo ber",
+    "youWon": "Vyhrál jsi! Durakem je soupeř. 🎉",
+    "youLost": "Prohrál jsi — zůstal ti durak.",
+    "draw": "Remíza — oba jste se zbavili karet.",
+    "log": {
+      "attack": "{{name}} útočí",
+      "defend": "{{name}} přebíjí",
+      "take": "{{name}} bere {{count}} karet",
+      "beat": "{{name}} říká bito",
+      "durak": "{{name}} zůstal durakem"
+    }
   },
   "print": {
     "allRules": "Pravidla ke stažení",
