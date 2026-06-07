@@ -1,10 +1,27 @@
 {
-  "name": "Card Teacher",
-  "short_name": "CardTeacher",
+  "name": "Card Teacher — výuka karetních her",
+  "short_name": "Card Teacher",
   "description": "Výuka karetních her — pravidla, tutoriály, hra proti počítači.",
-  "start_url": "/",
+  "id": "./",
+  "start_url": ".",
+  "scope": ".",
+  "lang": "cs",
   "display": "standalone",
-  "background_color": "#064f2a",
+  "orientation": "portrait-primary",
+  "background_color": "#020617",
   "theme_color": "#064f2a",
-  "icons": []
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
 }

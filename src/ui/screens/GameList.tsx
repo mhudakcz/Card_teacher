@@ -6,11 +6,22 @@ import { useNav } from '@/store';
 export function GameList() {
   const { t } = useTranslation();
   const openGame = useNav((s) => s.openGame);
+  const setPrinting = useNav((s) => s.setPrinting);
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-1 text-ink">{t('app.chooseGame')}</h1>
-      <p className="text-muted mb-6">{t('app.subtitle')}</p>
+      <div className="flex flex-wrap items-start justify-between gap-3 mb-6">
+        <div>
+          <h1 className="text-3xl font-bold mb-1 text-ink">{t('app.chooseGame')}</h1>
+          <p className="text-muted">{t('app.subtitle')}</p>
+        </div>
+        <button
+          onClick={() => setPrinting(true)}
+          className="shrink-0 px-3 py-2 rounded-lg bg-line/40 text-ink hover:text-accent font-medium text-sm transition"
+        >
+          🖨 {t('print.allRules')}
+        </button>
+      </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         {GAMES.map((g) => {

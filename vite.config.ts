@@ -2,7 +2,10 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'node:url';
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  // Na GitHub Pages běží projekt v podadresáři /Card_teacher/.
+  // V devu (vite serve) chceme kořen '/'.
+  base: command === 'build' ? '/Card_teacher/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -13,4 +16,4 @@ export default defineConfig({
     environment: 'node',
     include: ['src/**/*.test.ts'],
   },
-});
+}));

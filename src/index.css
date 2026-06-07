@@ -121,6 +121,34 @@ body {
   backdrop-filter: blur(6px);
 }
 
+/* ── Tisk pravidel ── */
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  #root::before {
+    display: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-doc {
+    margin: 0 !important;
+    max-width: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+  .game-rules {
+    break-inside: avoid;
+  }
+}
+
+@page {
+  margin: 18mm 16mm;
+}
+
 /* Herní stůl: plstěný povrch s vinětací a leskem. */
 .felt-table {
   background-color: rgb(var(--felt-2));

@@ -8,12 +8,15 @@ import { GameList } from './ui/screens/GameList';
 import { Rules } from './ui/screens/Rules';
 import { Tutorial } from './ui/screens/Tutorial';
 import { Play } from './ui/screens/Play';
+import { PrintRules } from './ui/screens/PrintRules';
 
 export function App() {
   const { t } = useTranslation();
-  const { game, view, setView, goHome } = useNav();
+  const { game, view, setView, goHome, printing } = useNav();
   const def = game ? getGame(game) : undefined;
   const views = def ? availableViews(def) : [];
+
+  if (printing) return <PrintRules />;
 
   return (
     <div className="min-h-full flex flex-col">

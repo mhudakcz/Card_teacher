@@ -190,6 +190,10 @@
     "skipped": "{{name}} stojí (eso)",
     "players": "Hráči"
   },
+  "print": {
+    "allRules": "Pravidla ke stažení",
+    "print": "Vytisknout"
+  },
   "card": {
     "joker": "Žolík",
     "suits": {

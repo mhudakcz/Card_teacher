@@ -51,15 +51,19 @@ export const useTheme = create<ThemeState>((set, get) => ({
 interface NavState {
   game: GameId | null;
   view: View;
+  printing: boolean;
   openGame: (game: GameId, view?: View) => void;
   setView: (view: View) => void;
   goHome: () => void;
+  setPrinting: (printing: boolean) => void;
 }
 
 export const useNav = create<NavState>((set) => ({
   game: null,
   view: 'rules',
-  openGame: (game, view = 'rules') => set({ game, view }),
+  printing: false,
+  openGame: (game, view = 'rules') => set({ game, view, printing: false }),
   setView: (view) => set({ view }),
-  goHome: () => set({ game: null }),
+  goHome: () => set({ game: null, printing: false }),
+  setPrinting: (printing) => set({ printing }),
 }));

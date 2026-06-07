@@ -190,6 +190,10 @@
     "skipped": "{{name}} is skipped (ace)",
     "players": "Players"
   },
+  "print": {
+    "allRules": "Printable rules",
+    "print": "Print"
+  },
   "card": {
     "suits": {
       "acorns": "Acorns",

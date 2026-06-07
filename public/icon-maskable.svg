@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Card Teacher">
+  <defs>
+    <linearGradient id="feltm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#065f35"/>
+      <stop offset="1" stop-color="#043c21"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#feltm)"/>
+  <!-- obsah v bezpečné zóně (~60% středu) -->
+  <g transform="rotate(8 256 256)">
+    <rect x="196" y="170" width="120" height="172" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="4"/>
+    <path d="M256 250c0-18 26-18 26 1 0 15-26 30-26 30s-26-15-26-30c0-19 26-19 26-1z" fill="#dc2626"/>
+  </g>
+</svg>
