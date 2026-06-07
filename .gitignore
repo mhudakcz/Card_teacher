@@ -1,0 +1,20 @@
+# Závislosti
+node_modules/
+
+# Build výstup
+dist/
+dist-ssr/
+*.tsbuildinfo
+
+# Logy
+*.log
+npm-debug.log*
+
+# Editory / OS
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Lokální nastavení nástrojů
+.claude/settings.local.json

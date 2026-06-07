@@ -1,0 +1,10 @@
+{
+  "name": "Card Teacher",
+  "short_name": "CardTeacher",
+  "description": "Výuka karetních her — pravidla, tutoriály, hra proti počítači.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#064f2a",
+  "theme_color": "#064f2a",
+  "icons": []
+}

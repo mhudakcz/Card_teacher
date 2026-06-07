@@ -1,0 +1,58 @@
+{
+  "app": {
+    "title": "Card Teacher",
+    "subtitle": "Learn card games",
+    "chooseGame": "Choose a game"
+  },
+  "nav": {
+    "back": "Back",
+    "rules": "Rules",
+    "tutorial": "Tutorial",
+    "play": "Play"
+  },
+  "difficulty": {
+    "label": "Difficulty",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard"
+  },
+  "games": {
+    "prsi": {
+      "name": "Prší (Czech Mau-Mau)",
+      "tagline": "Czech classic for 2–6 players"
+    }
+  },
+  "play": {
+    "yourTurn": "Your turn",
+    "opponentTurn": "Opponent {{name}} is thinking…",
+    "draw": "Draw a card",
+    "drew": "{{name}} drew a card",
+    "deck": "Deck",
+    "discard": "Discard",
+    "chooseSuit": "Choose a suit",
+    "newGame": "New game",
+    "youWon": "You won!",
+    "youLost": "{{name}} won.",
+    "mustDraw": "You must draw {{count}} cards",
+    "skipped": "{{name}} is skipped (ace)",
+    "players": "Players"
+  },
+  "card": {
+    "suits": {
+      "acorns": "Acorns",
+      "leaves": "Leaves",
+      "hearts": "Hearts",
+      "bells": "Bells"
+    },
+    "ranks": {
+      "7": "Seven",
+      "8": "Eight",
+      "9": "Nine",
+      "10": "Ten",
+      "U": "Under",
+      "O": "Over",
+      "K": "King",
+      "A": "Ace"
+    }
+  }
+}

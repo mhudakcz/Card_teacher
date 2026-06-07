@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Barevné tokeny: hodnoty jsou RGB kanály (kvůli alfa modifikátorům v Tailwindu) ── */
+
+:root {
+  /* Výchozí: noční režim + smaragdové schéma. */
+  --bg-1: 15 23 42;
+  --bg-2: 2 6 23;
+  --text: 226 232 240;
+  --muted: 148 163 184;
+  --panel: 30 41 59;
+  --border: 51 65 85;
+  --panel-alpha: 0.7;
+
+  --felt-1: 4 60 33;
+  --felt-2: 6 95 53;
+  --accent: 16 185 129;
+  --accent-hover: 52 211 153;
+  --accent-ink: 255 255 255;
+
+  --pattern: 255 255 255;
+  --pattern-opacity: 0.03;
+}
+
+/* ── Režim: denní ── */
+html[data-mode='day'] {
+  --bg-1: 233 238 245;
+  --bg-2: 203 213 225;
+  --text: 15 23 42;
+  --muted: 71 85 105;
+  --panel: 255 255 255;
+  --border: 203 213 225;
+  --panel-alpha: 0.9;
+  --pattern: 15 23 42;
+  --pattern-opacity: 0.04;
+}
+
+/* ── Režim: noční ── */
+html[data-mode='night'] {
+  --bg-1: 15 23 42;
+  --bg-2: 2 6 23;
+  --text: 226 232 240;
+  --muted: 148 163 184;
+  --panel: 30 41 59;
+  --border: 51 65 85;
+  --panel-alpha: 0.7;
+  --pattern: 255 255 255;
+  --pattern-opacity: 0.035;
+}
+
+/* ── Barevná schémata (felt + akcent) ── */
+html[data-scheme='emerald'] {
+  --felt-1: 4 60 33;
+  --felt-2: 6 95 53;
+  --accent: 16 185 129;
+  --accent-hover: 52 211 153;
+}
+html[data-scheme='sapphire'] {
+  --felt-1: 17 38 110;
+  --felt-2: 30 64 175;
+  --accent: 59 130 246;
+  --accent-hover: 96 165 250;
+}
+html[data-scheme='crimson'] {
+  --felt-1: 90 12 20;
+  --felt-2: 146 24 38;
+  --accent: 244 63 94;
+  --accent-hover: 251 113 133;
+}
+html[data-scheme='royal'] {
+  --felt-1: 49 18 96;
+  --felt-2: 88 28 135;
+  --accent: 168 85 247;
+  --accent-hover: 192 132 252;
+}
+html[data-scheme='graphite'] {
+  --felt-1: 24 24 27;
+  --felt-2: 39 39 42;
+  --accent: 245 158 11;
+  --accent-hover: 251 191 36;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: rgb(var(--text));
+  /* Vrstvené pozadí: jemný vzor barev + radiální záře + svislý gradient. */
+  background-color: rgb(var(--bg-2));
+  background-image:
+    radial-gradient(circle at 18% 22%, rgb(var(--accent) / 0.1), transparent 38%),
+    radial-gradient(circle at 82% 78%, rgb(var(--accent) / 0.08), transparent 42%),
+    linear-gradient(160deg, rgb(var(--bg-1)), rgb(var(--bg-2)));
+  background-attachment: fixed;
+  transition: background-color 0.4s ease, color 0.3s ease;
+}
+
+/* Jemný vzor karetních symbolů přes celou plochu. */
+#root::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--pattern-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffffff'%3E%3Cpath d='M20 14c-3 3-6 5-6 8a3 3 0 0 0 5 2c-.2 1.5-.7 2-1.4 3h4.8c-.7-1-1.2-1.5-1.4-3a3 3 0 0 0 5-2c0-3-3-5-6-8z'/%3E%3Cpath d='M60 52l5 7-5 7-5-7z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+
+/* ── Komponentní třídy ── */
+
+.panel {
+  background-color: rgb(var(--panel) / var(--panel-alpha));
+  border: 1px solid rgb(var(--border));
+  backdrop-filter: blur(6px);
+}
+
+/* Herní stůl: plstěný povrch s vinětací a leskem. */
+.felt-table {
+  background-color: rgb(var(--felt-2));
+  background-image:
+    radial-gradient(ellipse at 50% 30%, rgb(var(--felt-2)), rgb(var(--felt-1)) 78%),
+    radial-gradient(circle at 50% 50%, rgb(255 255 255 / 0.05), transparent 60%);
+  border: 1px solid rgb(0 0 0 / 0.3);
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.45), 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,58 @@
+{
+  "app": {
+    "title": "Card Teacher",
+    "subtitle": "Nauč se karetní hry",
+    "chooseGame": "Vyber si hru"
+  },
+  "nav": {
+    "back": "Zpět",
+    "rules": "Pravidla",
+    "tutorial": "Tutoriál",
+    "play": "Hrát"
+  },
+  "difficulty": {
+    "label": "Obtížnost",
+    "easy": "Lehká",
+    "medium": "Střední",
+    "hard": "Těžká"
+  },
+  "games": {
+    "prsi": {
+      "name": "Prší",
+      "tagline": "Česká klasika pro 2–6 hráčů"
+    }
+  },
+  "play": {
+    "yourTurn": "Jsi na tahu",
+    "opponentTurn": "Soupeř {{name}} přemýšlí…",
+    "draw": "Líznout kartu",
+    "drew": "{{name}} si líznul kartu",
+    "deck": "Balíček",
+    "discard": "Odhazovák",
+    "chooseSuit": "Vyber barvu",
+    "newGame": "Nová hra",
+    "youWon": "Vyhrál jsi!",
+    "youLost": "{{name}} vyhrál.",
+    "mustDraw": "Musíš líznout {{count}} karet",
+    "skipped": "{{name}} stojí (eso)",
+    "players": "Hráči"
+  },
+  "card": {
+    "suits": {
+      "acorns": "Žaludy",
+      "leaves": "Listy",
+      "hearts": "Srdce",
+      "bells": "Kule"
+    },
+    "ranks": {
+      "7": "Sedmička",
+      "8": "Osmička",
+      "9": "Devítka",
+      "10": "Desítka",
+      "U": "Spodek",
+      "O": "Svršek",
+      "K": "Král",
+      "A": "Eso"
+    }
+  }
+}
